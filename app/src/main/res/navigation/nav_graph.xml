@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_signInFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_chatListFragment"
+            app:destination="@id/chatListFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -22,5 +25,23 @@
         <action
             android:id="@+id/action_signUpFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.martdev.chitchat.ChatListFragment"
+        android:label="ChatListFragment"
+        tools:layout="@layout/chat_list">
+        <action
+            android:id="@+id/action_chatListFragment_to_chatDetailFragment"
+            app:destination="@id/chatDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatDetailFragment"
+        android:name="com.martdev.chitchat.ChatDetailFragment"
+        android:label="ChatDetailFragment"
+        tools:layout="@layout/chat_detail">
+        <argument
+            android:name="user_id"
+            app:argType="string" />
     </fragment>
 </navigation>
